@@ -1,0 +1,80 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="page-section">
+  <div class="@container/main overflow-hidden background aa">
+    <div
+      class="@[48rem]/main:flex-row flex flex-col px-[--space-m] py-[--space-xl] @[48rem]/main:px-[--space-xl] @[48rem]/main:py-[--space-3xl] gradient-overlay"
+    >
+      <div
+        class="flex flex-col text-center @[48rem]/main:text-left grow shrink-0 basis-1/2 a"
+      >
+        <div
+          class="@[48rem]/main:self-start self-center mb-[--space-s] justify-center bg-white w-fit px-[--space-2xs] py-[--space-3xs] font--2 font-medium"
+        >
+          Digitale oplossingen
+        </div>
+        <h1 class="font-5 mb-[--space-m]">
+          Your Bridge to Digital Brand Excellence
+        </h1>
+        <h2 class="font--1 mb-[--space-m]">
+          Our team of experts understands the ever-evolving digital landscape,
+          and we're here to guide you through it.
+        </h2>
+        <div class="@[48rem]/main:self-start self-center">
+          <Button text="Begin nu" size="md" />
+        </div>
+      </div>
+      <div class="grow shrink-0 basis-1/2 b">a</div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .gradient-overlay {
+    position: relative;
+
+    /* Pseudo-element for the background */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(180deg, #ffffff00 0%, #ff9421 100%);
+      opacity: 0.15;
+      z-index: 0; /* Make sure it's behind the content */
+    }
+
+    /* Ensure content stays above the background */
+    * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .background {
+    overflow: hidden;
+    background-color: #f1f4f9;
+    background-image: url("https://outgrid.uicore.co/growth-marketing/wp-content/uploads/sites/27/2023/10/Growth-Marketing-Hero-BG.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .aa {
+    animation: loadTransition 1s ease forwards;
+  }
+
+  @keyframes loadTransition {
+    0% {
+      border-radius: 0;
+      opacity: 0;
+    }
+    100% {
+      border-radius: 1.5rem;
+      opacity: 1;
+    }
+  }
+</style>

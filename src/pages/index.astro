@@ -1,14 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
+import Layout from "../layouts/Layout.astro";
+import AboveTheFold from "../components/AboveTheFold.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Button text='Begin nu', size='sm'></Button>
-	</main>
+  <main>
+    <div class="header-placeholder"></div>
+    <AboveTheFold />
+  </main>
 </Layout>
 
 <style>
-
+  .header-placeholder {
+    height: 5rem;
+  }
 </style>
