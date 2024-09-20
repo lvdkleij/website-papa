@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+  backgroundColor?: string;
+}
+
+const { class: _class, backgroundColor } = Astro.props;
+---
+
+<div class=`bg-[${backgroundColor}]`>
+  <div class="@container/main max-w-[--grid-max-width] mx-auto">
+    <div class="px-[--space-s] @[40rem]/main:px-[--space-m]">
+      <slot />
+    </div>
+  </div>
+</div>

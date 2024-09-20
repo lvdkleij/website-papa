@@ -1,80 +1,43 @@
 ---
 import Button from "./Button.astro";
+import ColumnLayout from "./Layout/ColumnLayout.astro";
+import PageSection from "./Layout/PageSection.astro";
+import Tag from "./Tag.astro";
 ---
 
-<div class="page-section">
-  <div class="@container/main overflow-hidden background aa">
-    <div
-      class="@[48rem]/main:flex-row flex flex-col px-[--space-m] py-[--space-xl] @[48rem]/main:px-[--space-xl] @[48rem]/main:py-[--space-3xl] gradient-overlay"
-    >
+<PageSection>
+  <div class="background pb-[--space-2xl] pt-[--space-xl]">
+    <ColumnLayout>
       <div
-        class="flex flex-col text-center @[48rem]/main:text-left grow shrink-0 basis-1/2 a"
+        class="flex flex-col grow shrink-0 basis-1/2 a self-center px-[--space-xs] @[55rem]/main:pr-0"
       >
-        <div
-          class="@[48rem]/main:self-start self-center mb-[--space-s] justify-center bg-white w-fit px-[--space-2xs] py-[--space-3xs] font--2 font-medium"
-        >
-          Digitale oplossingen
-        </div>
-        <h1 class="font-5 mb-[--space-m]">
-          Your Bridge to Digital Brand Excellence
+        <Tag class="mb-[--space-s] self-start" text="Digitale oplossingen" />
+        <h1 class="heading-6 mb-[--space-m]">
+          Data-gedreven inzichten met maatwerk Excel-oplossingen
         </h1>
-        <h2 class="font--1 mb-[--space-m]">
-          Our team of experts understands the ever-evolving digital landscape,
-          and we're here to guide you through it.
+        <h2 class="font-0 mb-[--space-m] @[60rem]/main:pr-[--space-xl]">
+          Als ervaren Excel-expert help ik bedrijven hun processen te
+          stroomlijnen met op maat gemaakte oplossingen, zoals geautomatiseerde
+          rapportages, financiële analyses en efficiënt voorraadbeheer. Ik zet
+          data om in bruikbare inzichten en bespaar jouw tijd.
         </h2>
-        <div class="@[48rem]/main:self-start self-center">
-          <Button text="Begin nu" size="md" />
+        <div class="gap-[--space-xs] flex items-center">
+          <Button text="Neem contact op" />
+          <a class="font--1 font-medium cursor-pointer">Lees meer</a>
         </div>
       </div>
-      <div class="grow shrink-0 basis-1/2 b">a</div>
-    </div>
+      <div class="flex-grow basis-1/2">
+        <div class="h-[32rem] bg-blue-50 opacity-50"></div>
+      </div>
+    </ColumnLayout>
   </div>
-</div>
+</PageSection>
 
 <style lang="scss">
-  .gradient-overlay {
-    position: relative;
-
-    /* Pseudo-element for the background */
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(180deg, #ffffff00 0%, #ff9421 100%);
-      opacity: 0.15;
-      z-index: 0; /* Make sure it's behind the content */
-    }
-
-    /* Ensure content stays above the background */
-    * {
-      position: relative;
-      z-index: 1;
-    }
-  }
-
   .background {
     overflow: hidden;
-    background-color: #f1f4f9;
     background-image: url("https://outgrid.uicore.co/growth-marketing/wp-content/uploads/sites/27/2023/10/Growth-Marketing-Hero-BG.webp");
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .aa {
-    animation: loadTransition 1s ease forwards;
-  }
-
-  @keyframes loadTransition {
-    0% {
-      border-radius: 0;
-      opacity: 0;
-    }
-    100% {
-      border-radius: 1.5rem;
-      opacity: 1;
-    }
   }
 </style>

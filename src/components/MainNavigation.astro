@@ -1,0 +1,38 @@
+---
+import Button from "./Button.astro";
+import PageSection from "./Layout/PageSection.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<PageSection>
+  <div class="p-[--space-xs] flex items-center">
+    <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
+    <div class="@[45rem]/main:flex hidden">
+      <div
+        class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
+      >
+        Diensten
+      </div>
+      <div
+        class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
+      >
+        Over mij
+      </div>
+    </div>
+    <div class="flex ml-auto">
+      <div
+        class="@[45rem]/main:hidden px-[--space-xs] py-[--space-2xs] rounded-3xl bg-slate-200 bg-opacity-20"
+      >
+        <Icon id="menu" name="mdi:menu" size="22" />
+      </div>
+      <Button class="hidden @[45rem]/main:block" text="Neem contact op" />
+    </div>
+  </div>
+</PageSection>
+
+<style>
+  [data-icon="menu"] {
+    color: var(--color_headline);
+    fill: var(--color_headline);
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import Card from "./Card.astro";
+import RowLayout from "./Layout/RowLayout.astro";
+import ColumnLayout from "./Layout/ColumnLayout.astro";
+import PageSection from "./Layout/PageSection.astro";
+---
+
+<PageSection backgroundColor="#f7f9fc">
+  <div class="flex justify-center">
+    <div class="py-[--space-2xl] w-full">
+      <div
+        class="u-grid grid-cols-1 @[45rem]/main:grid-cols-2 justify-between mb-[--space-2xl] gap-[--space-xs]"
+      >
+        <h1 class="font-5 font-bold max-w-[60rem]">
+          Haal meer uit uw bedrijf met op maat gemaakte Excel-oplossingen
+        </h1>
+        <h2 class="font-0 max-w-[40rem] self-end">
+          Met meer dan 16 jaar ervaring bied ik op maat gemaakte oplossingen om
+          uw efficiëntie te verhogen en uw succes te stimuleren
+        </h2>
+      </div>
+      <ColumnLayout>
+        <RowLayout>
+          <Card
+            class="@[45rem]/main:mt-[--space-3xl]"
+            title="Geautomatiseerde Rapportages"
+            body="Verlies geen tijd meer aan handmatige updates. Ik maak geautomatiseerde rapportages die real-time inzicht geven in uw prestaties. Zo kunt u snel en geïnformeerd beslissingen nemen op basis van actuele data."
+          /><Card
+            title="Voorraad- & Assetbeheer"
+            body="Optimaliseer uw voorraadbeheer en houd uw assets nauwkeurig bij. Ik ontwikkel systemen waarmee u eenvoudig voorraadniveaus, bestellingen en activa kunt monitoren. Voorkom overschotten of tekorten en bespaar op kosten."
+          />
+        </RowLayout>
+        <RowLayout>
+          <Card
+            title="Financiële Analyse"
+            body="Krijg grip op uw financiën met professionele analyses. Ik help bij het opstellen van budgetten, forecasts en cashflow-analyses. Met mijn expertise neemt u weloverwogen financiële beslissingen die uw bedrijf vooruithelpen."
+          /><Card
+            title="Maatwerk Spreadsheet Ontwikkeling"
+            body="Wilt u efficiënter werken en fouten verminderen? Ik ontwikkel op maat gemaakte Excel-spreadsheets die perfect aansluiten bij uw bedrijfsbehoeften. Met mijn oplossingen stroomlijnt u uw processen en bespaart u kostbare tijd."
+          />
+          <Card
+            title="Excel Training & Workshops"
+            body="Til uw Excel-vaardigheden naar een hoger niveau. Ik bied persoonlijke trainingen en interactieve workshops aan, afgestemd op uw kennisniveau. Ontdek nieuwe tips en trucs om efficiënter te werken en meer uit Excel te halen."
+          />
+        </RowLayout>
+      </ColumnLayout>
+    </div>
+  </div>
+</PageSection>

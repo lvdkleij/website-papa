@@ -1,15 +1,14 @@
 ---
 interface Props {
   text: string;
-  size: "sm" | "md" | "lg";
   class?: string;
 }
 
-const { text, size, class: _class } = Astro.props;
+const { text, class: _class } = Astro.props;
 ---
 
 <button
-  class=`${_class} heading-3 px-[--space-m] py-[--space-xs] rounded-xl font-medium`
+  class=`${_class} font--1 font-semibold py-[--space-3xs] px-[--space-xs] rounded-2xl`
 >
   {text}
 </button>
@@ -17,10 +16,6 @@ const { text, size, class: _class } = Astro.props;
 <style>
   button {
     color: white;
-    background-image: linear-gradient(
-      180deg,
-      var(--color_body) 0%,
-      var(--color_headline) 100%
-    );
+    background-color: var(--color_headline);
   }
 </style>
