@@ -19,13 +19,16 @@ import { Icon } from "astro-icon/components";
         Over mij
       </div>
     </div>
-    <div class="flex ml-auto">
+    <div class="flex ml-auto items-center">
       <div
         class="@[45rem]/main:hidden px-[--space-xs] py-[--space-2xs] rounded-3xl bg-slate-200 bg-opacity-20"
       >
         <Icon id="menu" name="mdi:menu" size="22" />
       </div>
-      <CtaButton class="hidden @[45rem]/main:block" text="Neem contact op" />
+      <CtaButton
+        class="!hidden @[45rem]/main:!inline-flex"
+        text="Neem contact op"
+      />
     </div>
   </div>
 </PageSection>
