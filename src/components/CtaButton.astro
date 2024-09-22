@@ -1,0 +1,36 @@
+---
+import HoverArrow from "./HoverArrow.astro";
+
+interface Props {
+  text: string;
+  class?: string;
+  backgroundColor?: "--color_headline" | "--transparent";
+  textColor?: "--color_headline" | "--white";
+}
+
+const {
+  text,
+  class: _class,
+  backgroundColor = "--color_headline",
+  textColor = "--white",
+} = Astro.props;
+---
+
+<a
+  class=`${_class} font--1 bg-[${backgroundColor}] !text-[${textColor}] cursor-pointer gap-[--space-2xs] items-center font-semibold py-[--space-3xs] px-[--space-xs] rounded-2xl`
+>
+  {text}
+
+  <HoverArrow />
+</a>
+
+<style>
+  a {
+    display: inline-flex;
+    transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+</style>

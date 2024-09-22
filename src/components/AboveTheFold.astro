@@ -1,5 +1,6 @@
 ---
-import Button from "./Button.astro";
+import CtaButton from "./CtaButton.astro";
+import HoverArrow from "./HoverArrow.astro";
 import ColumnLayout from "./Layout/ColumnLayout.astro";
 import PageSection from "./Layout/PageSection.astro";
 import Tag from "./Tag.astro";
@@ -21,9 +22,13 @@ import Tag from "./Tag.astro";
           rapportages, financiële analyses en efficiënt voorraadbeheer. Ik zet
           data om in bruikbare inzichten en bespaar jouw tijd.
         </h2>
-        <div class="gap-[--space-xs] flex items-center">
-          <Button text="Neem contact op" />
-          <a class="font--1 font-medium cursor-pointer">Lees meer</a>
+        <div class="flex items-center">
+          <CtaButton text="Neem contact op" />
+          <CtaButton
+            text="Lees meer"
+            backgroundColor="--transparent"
+            textColor="--color_headline"
+          />
         </div>
       </div>
       <div class="flex-grow basis-1/2">
