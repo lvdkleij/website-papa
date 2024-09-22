@@ -36,4 +36,13 @@
   :global(a:hover) .HoverArrow__tipPath {
     transform: translateX(0.225rem); /* Move the arrow tip to the right */
   }
+
+  /* Reverse animation on active (when clicked or touched) */
+  :global(a:active) .HoverArrow__linePath {
+    opacity: 0; /* Hide the line */
+  }
+
+  :global(a:active) .HoverArrow__tipPath {
+    transform: translateX(0); /* Move arrow tip back to original position */
+  }
 </style>

@@ -6,19 +6,23 @@ interface Props {
   class?: string;
   backgroundColor?: string;
   textColor?: string;
+  padding?: boolean;
 }
 
 const {
   text,
-  class: _class,
+  class: additionalClasses = "",
   backgroundColor = "--color_headline",
   textColor = "--white",
+  padding = true,
 } = Astro.props;
 ---
 
 <a
-  class={`${_class} font--1 cursor-pointer gap-[--space-2xs] items-center font-semibold py-[--space-3xs] px-[--space-xs] rounded-2xl`}
-  style={`background-color: var(${backgroundColor}); color: var(${textColor});`}
+  class={`font--1 cursor-pointer gap-[--space-2xs] font-semibold rounded-2xl
+    ${padding ? "padded" : ""} ${additionalClasses}`}
+  style={`--bg-color: var(${backgroundColor}); --text-color: var(${textColor});`}
+  tabindex="0"
 >
   {text}
 
@@ -28,11 +32,24 @@ const {
 <style>
   a {
     display: inline-flex;
-    transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    cursor: pointer;
+    align-items: center;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
     text-decoration: none;
+    transition: opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  a.padded {
+    padding: var(--space-3xs) var(--space-xs);
   }
 
   a:hover {
     opacity: 0.7;
+  }
+
+  a:active {
+    opacity: 1;
   }
 </style>
