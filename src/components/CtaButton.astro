@@ -4,8 +4,8 @@ import HoverArrow from "./HoverArrow.astro";
 interface Props {
   text: string;
   class?: string;
-  backgroundColor?: "--color_headline" | "--transparent";
-  textColor?: "--color_headline" | "--white";
+  backgroundColor?: string;
+  textColor?: string;
 }
 
 const {
@@ -17,7 +17,8 @@ const {
 ---
 
 <a
-  class=`${_class} font--1 bg-[${backgroundColor}] !text-[${textColor}] cursor-pointer gap-[--space-2xs] items-center font-semibold py-[--space-3xs] px-[--space-xs] rounded-2xl`
+  class={`${_class} font--1 cursor-pointer gap-[--space-2xs] items-center font-semibold py-[--space-3xs] px-[--space-xs] rounded-2xl`}
+  style={`background-color: var(${backgroundColor}); color: var(${textColor});`}
 >
   {text}
 
@@ -28,6 +29,7 @@ const {
   a {
     display: inline-flex;
     transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    text-decoration: none;
   }
 
   a:hover {
