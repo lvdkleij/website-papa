@@ -1,13 +1,14 @@
 ---
 import CtaButton from "./CtaButton.astro";
-import HoverArrow from "./HoverArrow.astro";
 import ColumnLayout from "./Layout/ColumnLayout.astro";
 import PageSection from "./Layout/PageSection.astro";
 import Tag from "./Tag.astro";
 ---
 
 <PageSection>
-  <div class="background pb-[--space-2xl] pt-[--space-xl]">
+  <div
+    class="background pb-[--space-2xl] pt-[--space-l] @[55rem]/main:pt-[--space-xl]"
+  >
     <ColumnLayout>
       <div
         class="flex flex-col grow shrink-0 basis-1/2 a self-center px-[--space-xs] @[55rem]/main:pr-0"
