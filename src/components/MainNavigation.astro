@@ -6,7 +6,9 @@ import { Icon } from "astro-icon/components";
 
 <PageSection>
   <div class="p-[--space-xs] flex items-center">
-    <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
+    <a href="/">
+      <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
+    </a>
     <div class="@[45rem]/main:flex hidden">
       <div
         class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
@@ -28,6 +30,7 @@ import { Icon } from "astro-icon/components";
       <CtaButton
         class="!hidden @[45rem]/main:!inline-flex"
         text="Neem contact op"
+        link="/contact"
       />
     </div>
   </div>

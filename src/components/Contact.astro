@@ -1,0 +1,79 @@
+---
+import ColumnLayout from "./Layout/ColumnLayout.astro";
+import PageSection from "./Layout/PageSection.astro";
+---
+
+<PageSection backgroundColor="#f6f9fc">
+  <div class="py-[--space-3xl]">
+    <ColumnLayout>
+      <div class="px-[--space-xs] @[55rem]/main:pr-0">
+        <h1 class="font-7 mb-[--space-s] pr-[--space-xl]">afasf</h1>
+        <p class="font-0 pr-[--space-xl]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+          consequatur reprehenderit, in beatae magnam voluptas rerum!
+          Repellendus, laborum magnam! Doloribus architecto deleniti dolorum
+          natus ullam aspernatur, autem aliquid nihil at.
+        </p>
+      </div>
+      <div>
+        <div
+          class="card-shadow rounded-l overflow-visible pt-[--space-m] px-[--space-xs] flex flex-col"
+        >
+          <h1 class="mb-[--space-2xs] font-3 font-medium px-[--space-2xs]">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p class="font-0 px-[--space-2xs]">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+          <div class="px-[--space-2xs] my-[--space-l]">
+            <div
+              class="flex mb-[--space-xs] flex-col @[28rem]/main:items-center @[28rem]/main:flex-row"
+            >
+              <p
+                class="font--1 font-semibold @[28rem]/main:basis-2/5 mb-[--space-2xs] @[28rem]/main:mb-0"
+              >
+                Werk email
+              </p>
+              <input
+                type="text"
+                class="grow py-[--space-2xs] bg-slate-100 px-[--space-xs] rounded-md"
+                placeholder="jane@example.com"
+              />
+            </div>
+            <div
+              class="flex flex-col mb-[--space-l] @[28rem]/main:items-center @[28rem]/main:flex-row"
+            >
+              <p
+                class="font--1 font-semibold @[28rem]/main:basis-2/5 mb-[--space-2xs] @[28rem]/main:mb-0"
+              >
+                Naam
+              </p>
+              <input
+                type="text"
+                class="grow py-[--space-2xs] bg-slate-100 px-[--space-xs] rounded-md"
+                placeholder="Jane Doe"
+              />
+            </div>
+            <div class="flex flex-col">
+              <p class="font--1 font-semibold basis-2/5 mb-[--space-2xs]">
+                Bericht
+              </p>
+              <textarea
+                class="grow py-[--space-2xs] bg-slate-100 px-[--space-xs] rounded-md"
+                rows="12"
+                placeholder="Jane Doe"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ColumnLayout>
+  </div>
+</PageSection>
+
+<style>
+  .card-shadow {
+    box-shadow:
+      0 30px 60px -12px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  }
+</style>

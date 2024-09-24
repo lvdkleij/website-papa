@@ -7,6 +7,7 @@ interface Props {
   backgroundColor?: string;
   textColor?: string;
   padding?: boolean;
+  link?: string;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   backgroundColor = "--color_headline",
   textColor = "--white",
   padding = true,
+  link,
 } = Astro.props;
 ---
 
@@ -23,6 +25,7 @@ const {
     ${padding ? "padded" : ""} ${additionalClasses}`}
   style={`--bg-color: var(${backgroundColor}); --text-color: var(${textColor});`}
   tabindex="0"
+  href={link}
 >
   {text}
 
