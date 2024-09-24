@@ -1,12 +1,27 @@
 ---
+import LinkedInIcon from "./icons/linkedInIcon.astro";
 import PageSection from "./Layout/PageSection.astro";
 ---
 
-<PageSection />
+<PageSection>
+  <div class="pt-[--space-3xl] py-[--space-xl] px-[--space-l] flex">
+    <div></div>
+    <div>
+      <div>
+        <h1 class="font-0 font-bold mb-[--space-2xs]">Algemeen</h1>
+        <a href="./contact" class="font-0">Contact</a>
+      </div>
+    </div>
+    <div class="flex-grow flex flex-col">
+      <div class="self-end">
+        <a
+          class="border rounded-lg font-2 flex items-center justify-center h-[--space-l] w-[--space-l] cursor-pointer hover:bg-slate-100"
+        >
+          <LinkedInIcon />
+        </a>
+      </div>
+    </div>
+  </div>
+</PageSection>
 
-<style>
-  .d {
-    height: 25rem;
-    background-color: #060316;
-  }
-</style>
+<style></style>
