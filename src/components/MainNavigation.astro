@@ -2,6 +2,12 @@
 import CtaButton from "./CtaButton.astro";
 import PageSection from "./Layout/PageSection.astro";
 import { Icon } from "astro-icon/components";
+
+interface Props {
+  displayContactButton?: boolean;
+}
+
+const { displayContactButton = true } = Astro.props;
 ---
 
 <PageSection>
@@ -27,11 +33,15 @@ import { Icon } from "astro-icon/components";
       >
         <Icon id="menu" name="mdi:menu" size="22" />
       </div>
-      <CtaButton
-        class="!hidden @[45rem]/main:!inline-flex"
-        text="Neem contact op"
-        link="/contact"
-      />
+      {
+        displayContactButton && (
+          <CtaButton
+            class="!hidden @[45rem]/main:!inline-flex"
+            text="Neem contact op"
+            link="/contact"
+          />
+        )
+      }
     </div>
   </div>
 </PageSection>
