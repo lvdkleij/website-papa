@@ -24,6 +24,12 @@ const { title } = Astro.props;
 <style lang="scss" is:global>
   @use "../../node_modules/utopia-core-scss/src/utopia" as utopia;
   @import "@fontsource-variable/inter";
+  @import "@fontsource-variable/cabin";
+  @import "@fontsource-variable/inter";
+  @import "@fontsource-variable/manrope";
+  @import "@fontsource-variable/mulish";
+  @import "@fontsource-variable/public-sans";
+  @import "@fontsource-variable/rubik";
   :root {
     --color_body: #425466;
     --color_headline: #0a2540;
@@ -75,7 +81,7 @@ const { title } = Astro.props;
       )
     );
 
-    --grid-max-width: 82rem;
+    --grid-max-width: 80rem;
     --grid-gutter: clamp(2rem, 0.8467rem + 2.3913vw, 2.5rem);
 
     --grid-columns: 12;
@@ -86,7 +92,7 @@ const { title } = Astro.props;
   }
 
   html {
-    font-family: "Inter Variable", sans-serif;
+    font-family: "Manrope Variable", sans-serif;
   }
 
   html,
@@ -96,7 +102,8 @@ const { title } = Astro.props;
 
   .heading-9 {
     font-size: var(--step-9);
-    line-height: 1.2;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
     font-weight: 800;
     color: var(--color_headline);
   }
@@ -109,10 +116,10 @@ const { title } = Astro.props;
   }
 
   .heading-7 {
-    font-size: var(--step-7);
-    line-height: 1.2;
+    font-size: var(--step-9);
+    line-height: 1.04;
     font-weight: 800;
-    letter-spacing: var(--space-5xs);
+    letter-spacing: -0.01em;
     color: var(--color_headline);
   }
 
@@ -178,6 +185,7 @@ const { title } = Astro.props;
   .font-0 {
     font-size: var(--step-0);
     line-height: 1.55;
+    letter-spacing: 0.2px;
     color: var(--color_body);
   }
 
