@@ -3,15 +3,26 @@ import Card from "./Card.astro";
 import RowLayout from "./Layout/RowLayout.astro";
 import ColumnLayout from "./Layout/ColumnLayout.astro";
 import PageSection from "./Layout/PageSection.astro";
+import Tag from "./Tag.astro";
 ---
 
-<PageSection backgroundColor="#f7f9fc">
-  <div class="flex justify-center">
+<PageSection>
+  <div class="flex justify-center relative">
+    <div
+      class="absolute left-0 top-0 bottom-0"
+      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -1;"
+    >
+    </div>
+    <div
+      class="absolute right-0 top-0 bottom-0"
+      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
+    >
+    </div>
     <div class="py-[--space-2xl] w-full">
       <div
-        class="flex flex-col items-center text-center @[45rem]/main:grid-cols-2 justify-between mb-[--space-2xl] px-[--space-xs] @[50rem]/main:px-0"
+        class="flex flex-col items-center text-center @[50rem]/main:grid-cols-2 justify-between mb-[--space-2xl] px-[--space-xs] @[50rem]/main:px-0"
       >
-        <h2 class="mb-[--space-xs]">Diensten</h2>
+        <Tag class="mb-[--space-s]" text="Diensten" />
         <h1 class="heading-6 max-w-[50rem] mb-[--space-xs]">
           Haal meer uit uw bedrijf met op maat gemaakte Excel-oplossingen
         </h1>
@@ -20,7 +31,7 @@ import PageSection from "./Layout/PageSection.astro";
           uw efficiëntie te verhogen en uw succes te stimuleren
         </h2>
       </div>
-      <ColumnLayout>
+      <ColumnLayout class="@[60rem]/main:px-[--space-xs]">
         <RowLayout>
           <Card
             class="@[45rem]/main:mt-[--space-3xl]"

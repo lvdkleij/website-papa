@@ -7,8 +7,6 @@ interface Props {
 const { text, class: _class } = Astro.props;
 ---
 
-<div
-  class=`${_class} rounded-3xl bg-slate-100 w-fit px-[--space-2xs] py-[--space-4xs] font--2`
->
+<h2 class=`${_class} font-0 font-semibold` style="color: var(--color_link);">
   {text}
-</div>
+</h2>

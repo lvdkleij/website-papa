@@ -1,9 +1,20 @@
 ---
 import PageSection from "./Layout/PageSection.astro";
+import Tag from "./Tag.astro";
 ---
 
-<PageSection backgroundColor="#E6EBE4">
-  <div class="flex justify-center">
+<PageSection>
+  <div class="flex justify-center relative">
+    <div
+      class="absolute left-0 top-0 bottom-0"
+      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
+    >
+    </div>
+    <div
+      class="absolute right-0 top-0 bottom-0"
+      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
+    >
+    </div>
     <div class="pb-[--space-3xl] pt-[--space-2xl] w-full">
       <div
         class="flex flex-col-reverse @[50rem]/main:flex-row gap-[--grid-gutter]"
@@ -12,9 +23,9 @@ import PageSection from "./Layout/PageSection.astro";
           <div class="h-[400px] w-full bg-red-50"></div>
         </div>
         <div
-          class="flex basis-1/2 flex-col justify-center pl-[--space-xs] @[50rem]/main:pl-0"
+          class="flex basis-1/2 flex-col justify-center px-[--space-xs] @[50rem]/main:pl-0"
         >
-          <h2 class="mb-[--space-xs]">Over mij</h2>
+          <Tag class="mb-[--space-s]" text="Over mij" />
           <h1 class="heading-6 mb-[--space-s]">
             Hi, ik ben Arno van der Kleij
           </h1>

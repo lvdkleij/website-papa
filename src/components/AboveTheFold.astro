@@ -6,8 +6,18 @@ import PageSection from "./Layout/PageSection.astro";
 
 <PageSection>
   <div
-    class="background pb-[--space-3xl] pt-[--space-l] @[45rem]/main:pt-[--space-xl]"
+    class="pb-[--space-3xl] pt-[--space-l] @[45rem]/main:pt-[--space-xl] relative"
   >
+    <div
+      class="absolute left-0 top-0 bottom-0"
+      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
+    >
+    </div>
+    <div
+      class="absolute right-0 top-0 bottom-0"
+      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
+    >
+    </div>
     <ColumnLayout>
       <div
         class="flex flex-col grow shrink-0 basis-1/2 a self-start px-[--space-xs] @[55rem]/main:pr-0"
@@ -31,8 +41,12 @@ import PageSection from "./Layout/PageSection.astro";
           />
         </div>
       </div>
-      <div class="flex-grow basis-1/2 @[55rem]/main:pl-[--space-xl]">
-        <div class="h-[30rem] @[55rem]/main:h-[34rem] bg-blue-50 opacity-50">
+      <div
+        class="flex-grow basis-1/2 self-center @[55rem]/main:pl-[--space-xl] backdrop-blur-3xl"
+      >
+        <div
+          class="h-[30rem] @[55rem]/main:h-[20rem] bg-[#e1efe6] opacity-50 rounded-xl"
+        >
         </div>
       </div>
     </ColumnLayout>
