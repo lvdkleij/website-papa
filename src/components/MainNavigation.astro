@@ -12,22 +12,23 @@ const { displayContactButton = true } = Astro.props;
 <script>
   let displayMenu = false;
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.querySelector("#menu-button") as HTMLElement;
-    const menuContent = document.querySelector("#menu-content") as HTMLElement;
-    const body = document.body; // Get the body element
+  const menuButton = document.querySelector("#menu-button") as HTMLElement;
+  const menuContent = document.querySelector("#menu-content") as HTMLElement;
+  const body = document.body; // Get the body element
 
-    menuButton?.addEventListener("click", () => {
-      displayMenu = !displayMenu;
-      if (displayMenu) {
-        menuContent.classList.add("open");
-        body.classList.add("no-scroll"); // Add class to disable scrolling
-      } else {
-        menuContent.classList.remove("open");
-        body.classList.remove("no-scroll"); // Remove class to re-enable scrolling
-      }
-    });
-  });
+  const toggleMenu = () => {
+    displayMenu = !displayMenu;
+    if (displayMenu) {
+      menuContent.classList.add("open");
+      body.classList.add("no-scroll"); // Add class to disable scrolling
+    } else {
+      menuContent.classList.remove("open");
+      body.classList.remove("no-scroll"); // Remove class to re-enable scrolling
+    }
+  };
+
+  menuButton?.addEventListener("touchEnd", toggleMenu);
+  menuButton?.addEventListener("click", toggleMenu);
 </script>
 
 <div id="menu-content" class="menu-content z-10 pt-[--space-xl]">
