@@ -27,11 +27,10 @@ const { displayContactButton = true } = Astro.props;
     }
   };
 
-  menuButton?.addEventListener("touchEnd", toggleMenu);
   menuButton?.addEventListener("click", toggleMenu);
 </script>
 
-<div id="menu-content" class="menu-content z-10 pt-[--space-xl]">
+<div id="menu-content" class="menu-content z-10 mt-[--space-xl]">
   <div class="w-full bg-white" style="min-height: 100vh;">
     <a href="./contact">Contact</a>
   </div>
