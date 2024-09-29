@@ -8,7 +8,7 @@ const { class: _class, backgroundColor } = Astro.props;
 ---
 
 <div style=`background-color: ${backgroundColor};`>
-  <div class="@container/main max-w-[--grid-max-width] mx-auto">
+  <div class="@container/main max-w-[--grid-max-width] mx-auto relative">
     <div class="mx-[--space-s] @[65rem]/main:mx-[--space-xl]">
       <slot />
     </div>
