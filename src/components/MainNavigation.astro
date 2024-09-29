@@ -30,8 +30,8 @@ const { displayContactButton = true } = Astro.props;
   });
 </script>
 
-<div id="menu-content" class="menu-content bg-white z-10 pt-[--space-xl]">
-  <div class="w-full h-full">
+<div id="menu-content" class="menu-content z-10 pt-[--space-xl]">
+  <div class="w-full bg-white" style="min-height: 100vh;">
     <a href="./contact">Contact</a>
   </div>
 </div>
@@ -83,7 +83,7 @@ const { displayContactButton = true } = Astro.props;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100%;
+    min-height: 100vh;
     transform: translateX(100%);
     opacity: 1;
     visibility: hidden;
