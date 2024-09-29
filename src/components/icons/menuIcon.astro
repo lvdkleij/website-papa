@@ -1,25 +1,28 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menu-icon") as HTMLElement;
+    menuIcon.addEventListener("click", () => {
+      menuIcon.classList.toggle("animate");
+    });
+  });
+</script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
   height="24px"
   viewBox="0 0 960 960"
   width="40px"
   id="menu-icon"
+  focusable="false"
+  role="img"
 >
-  <path d="M120 240v80h720v-80H120Z" class="line1"></path>
-  <path d="M120 440v80h720v-80H120Z" class="line2"></path>
-  <path d="M120 640v80h720v-80H120Z" class="line3"></path>
-  <path d="M120 440v80h720v-80H120Z" class="line4"></path>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M120 240v80h720v-80H120Z" class="line1"></path>
+    <path d="M120 440v80h720v-80H120Z" class="line2"></path>
+    <path d="M120 640v80h720v-80H120Z" class="line3"></path>
+    <path d="M120 440v80h720v-80H120Z" class="line4"></path>
+  </g>
 </svg>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuIcon = document.getElementById("menu-icon") as HTMLElement;
-
-    // Toggle the 'animate' class on click
-    menuIcon.addEventListener("click", () => {
-      menuIcon.classList.toggle("animate");
-    });
-  });
-</script>
 
 <style>
   :root {
@@ -28,7 +31,6 @@
   }
 
   svg path {
-    fill: inherit;
     transition:
       transform var(--transition-duration),
       visibility var(--transition-duration);
