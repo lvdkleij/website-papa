@@ -1,7 +1,7 @@
 ---
-import CtaButton from "./CtaButton.astro";
-import PageSection from "./Layout/PageSection.astro";
-import { Icon } from "astro-icon/components";
+import CtaButton from "../CtaButton.astro";
+import MenuIcon from "../icons/menuIcon.astro";
+import PageSection from "../Layout/PageSection.astro";
 
 interface Props {
   displayContactButton?: boolean;
@@ -15,15 +15,18 @@ const { displayContactButton = true } = Astro.props;
   const menuButton = document.querySelector("#menu-button") as HTMLElement;
   const menuContent = document.querySelector("#menu-content") as HTMLElement;
   const body = document.body; // Get the body element
+  const html = document.documentElement;
 
   const toggleMenu = () => {
     displayMenu = !displayMenu;
     if (displayMenu) {
       menuContent.classList.add("open");
       body.classList.add("no-scroll"); // Add class to disable scrolling
+      html.classList.add("no-scroll"); // Add class to disable scrolling
     } else {
       menuContent.classList.remove("open");
       body.classList.remove("no-scroll"); // Remove class to re-enable scrolling
+      html.classList.remove("no-scroll"); // Add class to disable scrolling
     }
   };
 
@@ -32,7 +35,12 @@ const { displayContactButton = true } = Astro.props;
 
 <div id="menu-content" class="menu-content z-10 mt-[--space-xl]">
   <div class="w-full bg-white" style="min-height: 100vh;">
-    <a href="./contact">Contact</a>
+    <a class="block px-[--space-m] py-[--space-xs] w-full" href="./contact"
+      >Over mij</a
+    >
+    <a class="block px-[--space-m] py-[--space-xs] w-full" href="./contact"
+      >Contact</a
+    >
   </div>
 </div>
 <PageSection>
@@ -57,7 +65,7 @@ const { displayContactButton = true } = Astro.props;
         id="menu-button"
         class="@[45rem]/main:hidden px-[--space-xs] py-[--space-2xs] rounded-3xl bg-slate-200 bg-opacity-20"
       >
-        <Icon id="menu" name="mdi:menu" size="22" />
+        <MenuIcon />
       </button>
       {
         displayContactButton && (
@@ -73,11 +81,6 @@ const { displayContactButton = true } = Astro.props;
 </PageSection>
 
 <style>
-  [data-icon="menu"] {
-    color: var(--color_headline);
-    fill: var(--color_headline);
-  }
-
   #menu-content {
     position: fixed;
     top: 0;
@@ -101,6 +104,7 @@ const { displayContactButton = true } = Astro.props;
       visibility 0s;
   }
 
+  html.no-scroll,
   body.no-scroll {
     overflow: hidden;
   }
