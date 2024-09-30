@@ -1,0 +1,14 @@
+---
+import CtaButton from "../../CtaButton.astro";
+import PageSection from "../../Layout/PageSection.astro";
+import { Navigation } from "./Navigation.tsx";
+
+interface Props {
+  displayContactButton?: boolean;
+}
+const { displayContactButton = true } = Astro.props;
+---
+
+<PageSection>
+  <Navigation client:visible displayContactButton={displayContactButton} />
+</PageSection>
