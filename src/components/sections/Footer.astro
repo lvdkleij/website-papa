@@ -9,12 +9,13 @@ import PageSection from "../Layout/PageSection.astro";
     <div>
       <div>
         <h1 class="font-0 font-bold mb-[--space-2xs]">Algemeen</h1>
-        <a href="./contact" class="font-0">Contact</a>
+        <a href="./contact" class="font-0" data-astro-prefetch>Contact</a>
       </div>
     </div>
     <div class="flex-grow flex flex-col">
       <div class="self-end">
         <a
+          data-astro-prefetch
           class="border rounded-lg font-2 flex items-center justify-center h-[--space-l] w-[--space-l] cursor-pointer hover:bg-slate-100"
         >
           <LinkedInIcon />

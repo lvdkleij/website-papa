@@ -1,4 +1,4 @@
-import { createEffect, createSignal, mergeProps, Show } from "solid-js";
+import { createSignal, mergeProps } from "solid-js";
 import { MenuButton } from "../../buttons/MenuButton";
 import "./Navigation.css";
 
@@ -14,12 +14,14 @@ export function Navigation(_props: { displayContactButton?: boolean }) {
       >
         <div class="w-full bg-white" style="min-height: 100vh;">
           <a
+            data-astro-prefetch
             class="block px-[--space-m] py-[--space-xs] w-full"
             href="./contact"
           >
             Over mij
           </a>
           <a
+            data-astro-prefetch
             class="block px-[--space-m] py-[--space-xs] w-full"
             href="./contact"
           >
@@ -29,7 +31,7 @@ export function Navigation(_props: { displayContactButton?: boolean }) {
       </div>
 
       <section class="p-[--space-xs] flex items-center z-20 relative">
-        <a href="/">
+        <a href="/" data-astro-prefetch>
           <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
         </a>
         <div class="@[45rem]/main:flex hidden">
