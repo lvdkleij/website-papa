@@ -1,0 +1,17 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<a class="inline-block atlas-text" data-astro-prefetch>{text}</a>
+
+<style>
+  a {
+    color: #0abf53;
+    font-weight: 700;
+    line-height: 26px;
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  class?: string;
+}
+
+const { class: _class, title } = Astro.props;
+---
+
+<div class=`${_class}`>
+  <label class="font--2 !font-bold">{title}</label>
+  <input
+    class="dd rounded-xl py-[--space-xs] px-[--space-s] w-full"
+    placeholder="LALA"
+  />
+</div>
+
+<style>
+  .dd {
+    border: 2px solid rgb(211, 211, 211);
+  }
+</style>

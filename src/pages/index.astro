@@ -2,19 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 import AboveTheFold from "../components/sections/AboveTheFold.astro";
 import Footer from "../components/sections/Footer.astro";
-import Services from "../components/sections/Services.astro";
 import AboutMe from "../components/sections/AboutMe.astro";
 import MainNavigation from "../components/sections/mainNavigation/MainNavigation.astro";
-import MyMission from "../components/sections/MyMission.astro";
-import ReadyTo from "../components/ReadyTo.astro";
+import ContactForm from "../components/sections/ContactForm/ContactForm.astro";
+import WhatToExpect from "../components/sections/WhatToExpect/WhatToExpect.astro";
+import Services from "../components/sections/Services.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <MainNavigation />
-  <AboveTheFold />
+  <div class="dd flex flex-col">
+    <MainNavigation />
+    <AboveTheFold />
+  </div>
   <AboutMe />
   <Services />
-  <MyMission />
-  <ReadyTo />
+  <WhatToExpect />
+  <ContactForm />
   <Footer />
 </Layout>
+
+<style>
+  .mask {
+    height: calc(100vh - var(--space-3xl));
+  }
+  .dd {
+    background-color: #0f7c41;
+    height: calc(100vh - var(--space-3xl));
+  }
+</style>

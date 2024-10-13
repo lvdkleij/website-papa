@@ -1,0 +1,45 @@
+---
+import PageSection from "../../Layout/PageSection.astro";
+import AtlasEyebrow from "../../text/AtlasEyebrow.astro";
+import AtlasParagraph from "../../text/AtlasParagraph.astro";
+import InputField from "./InputField.astro";
+import TextAreaField from "./TextAreaField.astro";
+---
+
+<PageSection>
+  <div
+    class="flex flex-col @[68rem]/main:flex-row gap-[--grid-gutter] py-[--space-2xl]"
+  >
+    <div class="basis-1/2 grow p-[--space-2xs] @[50rem]/main:mr-[--space-3xl]">
+      <AtlasEyebrow text="Contact" class="mb-[--space-2xs]" />
+      <h2 class="atlas-heading-lg">Laten we aan de slag gaan</h2>
+      <AtlasParagraph class="py-[--space-s] mt-[--space-s]"
+        >Als ervaren Excel-expert help ik bedrijven hun processen te
+        stroomlijnen met op maat gemaakte oplossingen, zoals geautomatiseerde
+        rapportages, financiële analyses en efficiënt voorraadbeheer. Ik zet
+        data om in bruikbare inzichten en bespaar jouw tijd.</AtlasParagraph
+      >
+    </div>
+    <div class="basis-1/2 grow">
+      <form class="grid grid-cols-6 gap-x-[--grid-gutter] gap-y-[--space-m]">
+        <InputField title="NAAM" class="col-span-3" />
+        <InputField title="WERK EMAIL" class="col-span-3" />
+        <InputField title="TELEFOONNUMMER" class="col-span-3" />
+        <InputField title="BEDRIJFSNAAM" class="col-span-3" />
+        <TextAreaField title="BERICHT" class="col-span-6" />
+      </form>
+    </div>
+  </div>
+</PageSection>
+
+<style>
+  h5 {
+    color: #5c687c;
+  }
+
+  .dd {
+    border-top-width: 1px;
+    border-style: solid;
+    border-color: #8e8e8e2e;
+  }
+</style>

@@ -4,60 +4,59 @@ import ColumnLayout from "../Layout/ColumnLayout.astro";
 import PageSection from "../Layout/PageSection.astro";
 ---
 
-<PageSection>
-  <div
-    class="pb-[--space-3xl] pt-[--space-l] @[45rem]/main:pt-[--space-xl] relative"
-  >
-    <div
-      class="absolute left-0 top-0 bottom-0"
-      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
-    >
-    </div>
-    <div
-      class="absolute right-0 top-0 bottom-0"
-      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
-    >
-    </div>
-    <ColumnLayout>
-      <div
-        class="flex flex-col grow shrink-0 basis-1/2 a self-start px-[--space-xs] @[55rem]/main:pr-0"
-      >
-        <h1 class="font-6 mb-[--space-m] @[55rem]/main:mt-[--space-m]">
-          Maak data eenvoudig met <span class="text-[#0f7c41]">Excel</span>
-        </h1>
-        <h2 class="font-0 mb-[--space-m] @[60rem]/main:pr-[--space-xl]">
-          Als ervaren Excel-expert help ik bedrijven hun processen te
-          stroomlijnen met op maat gemaakte oplossingen, zoals geautomatiseerde
-          rapportages, financiële analyses en efficiënt voorraadbeheer. Ik zet
-          data om in bruikbare inzichten en bespaar jouw tijd.
-        </h2>
-        <div class="flex items-center gap-[--space-xs] flex-wrap">
-          <CtaButton text="Neem contact op" link="/contact" />
-          <CtaButton
-            text="Lees meer"
-            backgroundColor="--transparent"
-            textColor="--color_headline"
-            padding={false}
-          />
-        </div>
-      </div>
-      <div
-        class="flex-grow basis-1/2 self-center @[55rem]/main:pl-[--space-xl]"
-      >
+<div class="flex-grow">
+  <PageSection height="full">
+    <div class="pt-[--space-l] relative h-full pb-[--space-2xl]">
+      <ColumnLayout>
         <div
-          class="h-[30rem] @[55rem]/main:h-[20rem] bg-[#e1efe6] opacity-50 rounded-xl"
+          id="dd"
+          class="flex flex-col grow shrink-0 basis-1/2 px-[--space-xs] @[55rem]/main:pr-0 self-center"
         >
+          <h1
+            class="font-5 mb-[--space-m] @[55rem]/main:mt-[--space-m]"
+            style="color: white;"
+          >
+            Een Excel specialist nodig?
+          </h1>
+          <h2
+            class="font-0 mb-[--space-m] @[60rem]/main:pr-[--space-xl]"
+            style="color: rgb(237, 237, 237);"
+          >
+            Als ervaren Excel-expert help ik bedrijven hun processen te
+            stroomlijnen met op maat gemaakte oplossingen, zoals
+            geautomatiseerde rapportages, financiële analyses en efficiënt
+            voorraadbeheer. Ik zet data om in bruikbare inzichten en bespaar
+            jouw tijd.
+          </h2>
+          <div class="flex items-center gap-[--space-xs] flex-wrap">
+            <CtaButton text="Neem contact op" link="/contact" />
+            <CtaButton
+              text="Lees meer"
+              backgroundColor="--transparent"
+              textColor="--headlineColor"
+              padding={false}
+            />
+          </div>
         </div>
-      </div>
-    </ColumnLayout>
-  </div>
-</PageSection>
+        <div
+          class="flex-grow basis-1/2 self-center @[55rem]/main:pl-[--space-xl]"
+        >
+          <div
+            class="h-[30rem] @[55rem]/main:h-[20rem] bg-[#e1efe6] opacity-50 rounded-xl"
+          >
+          </div>
+        </div>
+      </ColumnLayout>
+    </div>
+  </PageSection>
+</div>
 
-<style lang="scss">
-  .background {
-    overflow: hidden;
-    background-image: url("https://outgrid.uicore.co/growth-marketing/wp-content/uploads/sites/27/2023/10/Growth-Marketing-Hero-BG.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
+<script>
+  const header = document.getElementById("dd") as HTMLElement;
+  window.addEventListener("scroll", () => {
+    let scrollPosition = document.documentElement.scrollTop;
+    if (scrollPosition >= 200) {
+      header.style.opacity = `${1 - (scrollPosition - 200) / 400}`;
+    }
+  });
+</script>

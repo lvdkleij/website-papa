@@ -7,6 +7,10 @@ interface Props {
 const { text, class: _class } = Astro.props;
 ---
 
-<h2 class=`${_class} font--2 font-medium`>
-  {text}
-</h2>
+<h5 class:list={["atlas-text", _class]}>{text}</h5>
+
+<style>
+  h5 {
+    color: #5c687c;
+  }
+</style>

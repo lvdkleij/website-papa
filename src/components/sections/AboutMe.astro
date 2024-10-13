@@ -1,42 +1,53 @@
 ---
 import PageSection from "../Layout/PageSection.astro";
-import Tag from "../Tag.astro";
+import AtlasLink1 from "../links/AtlasLink-1.astro";
+import AtlasEyebrow from "../text/AtlasEyebrow.astro";
+import AtlasParagraph from "../text/AtlasParagraph.astro";
 ---
 
 <PageSection>
-  <div class="flex justify-center relative">
+  <div
+    class="flex flex-col @[44rem]/main:flex-row py-[--space-2xl] gap-y-[--grid-gutter] min-h-[36rem]"
+  >
     <div
-      class="absolute left-0 top-0 bottom-0"
-      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
+      class="basis-1/2 @[44rem]/main:shrink-0 p-[--space-2xs] overflow-hidden"
     >
-    </div>
-    <div
-      class="absolute right-0 top-0 bottom-0"
-      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
-    >
-    </div>
-    <div class="pb-[--space-3xl] pt-[--space-2xl] w-full">
-      <div
-        class="flex flex-col-reverse @[50rem]/main:flex-row gap-[--grid-gutter]"
-      >
-        <div class="basis-1/2 rounded-md overflow-hidden">
-          <div class="h-[400px] w-full bg-red-50"></div>
-        </div>
-        <div
-          class="flex basis-1/2 flex-col justify-center px-[--space-xs] @[50rem]/main:pl-0"
-        >
-          <Tag class="mb-[--space-s]" text="Over mij" />
-          <h1 class="font-4 mb-[--space-s]">Hi, ik ben Arno van der Kleij</h1>
-          <p class="font-0 mb-[--space-m]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
-            tempora facilis voluptatum, obcaecati molestias nesciunt veritatis
-            velit voluptates, eveniet illum hic. Assumenda at reiciendis
-            corporis minus nam dicta, mollitia facere. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit.
-          </p>
-          <a class="text_link" data-astro-prefetch>Lees meer</a>
-        </div>
+      <div class="h-[60cqw] @[44rem]/main:h-full w-full bg-red-50 rounded-xl">
       </div>
+    </div>
+    <div class="basis-1/2 p-[--space-2xs] @[52rem]/main:ml-[--space-2xl]">
+      <AtlasEyebrow text="Over mij" class="mb-[--space-2xs]" />
+      <h2 class="atlas-heading-lg">Hi, ik ben Arno van der Kleij</h2>
+      <AtlasParagraph class="py-[--space-s] mt-[--space-s]"
+        ><span>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+          explicabo odit a soluta voluptate perspiciatis numquam rem
+          exercitationem blanditiis quisquam.</span
+        >
+        <span class="inline-block mt-[--space-xs]">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+          explicabo odit a soluta voluptate perspiciatis numquam rem
+          exercitationem blanditiis quisquam.</span
+        >
+
+        <span class="inline-block mt-[--space-xs]">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+          explicabo odit a soluta voluptate perspiciatis numquam rem
+          exercitationem blanditiis quisquam.</span
+        >
+      </AtlasParagraph>
+      <AtlasLink1 text="Lees meer" />
     </div>
   </div>
 </PageSection>
+
+<style>
+  h5 {
+    color: #5c687c;
+  }
+  .dd {
+    border-top-width: 1px;
+    border-style: solid;
+    border-color: #8e8e8e2e;
+  }
+</style>

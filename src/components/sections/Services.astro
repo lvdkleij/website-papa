@@ -1,61 +1,20 @@
 ---
-import Card from "../Card.astro";
-import RowLayout from "../Layout/RowLayout.astro";
-import ColumnLayout from "../Layout/ColumnLayout.astro";
 import PageSection from "../Layout/PageSection.astro";
-import Tag from "../Tag.astro";
+import AtlasEyebrow from "../text/AtlasEyebrow.astro";
+import AtlasParagraph from "../text/AtlasParagraph.astro";
 ---
 
 <PageSection>
-  <div class="flex justify-center relative">
-    <div
-      class="absolute left-0 top-0 bottom-0"
-      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -1;"
+  <div class="py-[--space-2xl] flex flex-col items-center">
+    <AtlasEyebrow text="Diensten" class="mb-[--space-2xs]" />
+    <h2 class="atlas-heading-lg max-w-[48rem] text-center">
+      Haal meer uit uw bedrijf met op maat gemaakte Excel-oplossingen
+    </h2>
+    <AtlasParagraph
+      class="mt-[--space-s] text-center max-w-[44rem] py-[--space-s]"
+      >Elke onderneming kan profiteren van duidelijke en efficiënte
+      Excel-oplossingen. Mijn missie is om ingewikkelde taken eenvoudig te
+      maken, zodat u zich kunt focussen op wat echt telt.</AtlasParagraph
     >
-    </div>
-    <div
-      class="absolute right-0 top-0 bottom-0"
-      style="border-left: 1px solid rgba(46, 46, 46, 0.043); z-index: -100;"
-    >
-    </div>
-    <div class="py-[--space-2xl] w-full">
-      <div
-        class="flex flex-col items-center text-center @[50rem]/main:grid-cols-2 justify-between mb-[--space-2xl] px-[--space-xs] @[50rem]/main:px-0"
-      >
-        <Tag class="mb-[--space-s]" text="Diensten" />
-        <h1 class="font-4 max-w-[50rem] mb-[--space-xs]">
-          Haal meer uit uw bedrijf met op maat gemaakte Excel-oplossingen
-        </h1>
-        <h2 class="font-0 max-w-[40rem]">
-          Met meer dan 16 jaar ervaring bied ik op maat gemaakte oplossingen om
-          uw efficiëntie te verhogen en uw succes te stimuleren
-        </h2>
-      </div>
-      <ColumnLayout class="@[60rem]/main:px-[--space-xs]">
-        <RowLayout>
-          <Card
-            class="@[45rem]/main:mt-[--space-3xl]"
-            title="Geautomatiseerde Rapportages"
-            body="Verlies geen tijd meer aan handmatige updates. Ik maak geautomatiseerde rapportages die real-time inzicht geven in uw prestaties. Zo kunt u snel en geïnformeerd beslissingen nemen op basis van actuele data."
-          /><Card
-            title="Voorraad- & Assetbeheer"
-            body="Optimaliseer uw voorraadbeheer en houd uw assets nauwkeurig bij. Ik ontwikkel systemen waarmee u eenvoudig voorraadniveaus, bestellingen en activa kunt monitoren. Voorkom overschotten of tekorten en bespaar op kosten."
-          />
-        </RowLayout>
-        <RowLayout>
-          <Card
-            title="Financiële Analyse"
-            body="Krijg grip op uw financiën met professionele analyses. Ik help bij het opstellen van budgetten, forecasts en cashflow-analyses. Met mijn expertise neemt u weloverwogen financiële beslissingen die uw bedrijf vooruithelpen."
-          /><Card
-            title="Maatwerk Spreadsheet Ontwikkeling"
-            body="Wilt u efficiënter werken en fouten verminderen? Ik ontwikkel op maat gemaakte Excel-spreadsheets die perfect aansluiten bij uw bedrijfsbehoeften. Met mijn oplossingen stroomlijnt u uw processen en bespaart u kostbare tijd."
-          />
-          <Card
-            title="Excel Training & Workshops"
-            body="Til uw Excel-vaardigheden naar een hoger niveau. Ik bied persoonlijke trainingen en interactieve workshops aan, afgestemd op uw kennisniveau. Ontdek nieuwe tips en trucs om efficiënter te werken en meer uit Excel te halen."
-          />
-        </RowLayout>
-      </ColumnLayout>
-    </div>
   </div>
 </PageSection>

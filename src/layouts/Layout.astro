@@ -30,15 +30,29 @@ const { title } = Astro.props;
   @import "@fontsource-variable/mulish";
   @import "@fontsource-variable/public-sans";
   @import "@fontsource-variable/rubik";
+  @import "@fontsource-variable/archivo";
+  @import "@fontsource-variable/space-grotesk";
+  @import "@fontsource-variable/plus-jakarta-sans";
+
   :root {
-    --color_body: #425466;
-    --color_headline: #0a2540;
-    --colorExcelGreen: #0f7c41;
+    --headlineColor: #0a2540;
+    --bodyColor: #425466;
+    --linkColor: #635bff;
+    --excelGreenColor: #0f7c41;
     --transparent: transparent;
     --white: #fff;
-    --color_link: #635bff;
+    --fontFamily: "Plus Jakarta Sans Variable", sans-serif;
 
-    --fontFamily: "Manrope Variable", sans-serif;
+    /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+    --fontStep--2: clamp(0.7813rem, 0.7747rem + 0.0326cqi, 0.8rem);
+    --fontStep--1: clamp(0.9375rem, 0.9158rem + 0.1087cqi, 1rem);
+    --fontStep-0: clamp(1.125rem, 1.0815rem + 0.2174cqi, 1.25rem);
+    --fontStep-1: clamp(1.35rem, 1.2761rem + 0.3696cqi, 1.5625rem);
+    --fontStep-2: clamp(1.62rem, 1.5041rem + 0.5793cqi, 1.9531rem);
+    --fontStep-3: clamp(1.944rem, 1.771rem + 0.8651cqi, 2.4414rem);
+    --fontStep-4: clamp(2.3328rem, 2.0827rem + 1.2504cqi, 3.0518rem);
+    --fontStep-5: clamp(2.7994rem, 2.4462rem + 1.7658cqi, 3.8147rem);
 
     @include utopia.generateTypeScale(
       (
@@ -84,14 +98,63 @@ const { title } = Astro.props;
       )
     );
 
-    --grid-max-width: 80rem;
+    --grid-max-width: 84rem;
     --grid-gutter: clamp(2rem, 0.8467rem + 2.3913vw, 2.5rem);
 
     --grid-columns: 12;
   }
 
   html {
-    font-family: "Manrope Variable", sans-serif;
+    overscroll-behavior: none;
+    font-family: "Plus Jakarta Sans Variable", sans-serif;
+  }
+
+  .atlas-heading-xl {
+    font-size: clamp(3rem, 2.5833rem + 1.8519vw, 4.5rem);
+    line-height: clamp(3rem + 10px, 2.5833rem + 1.8519vw + 10px, 4.5rem + 10px);
+    font-weight: 500;
+  }
+
+  .atlas-heading-lg {
+    font-size: clamp(2rem, 1.9247rem + 0.8vw, 3.2rem);
+    line-height: clamp(
+      2rem + 10px,
+      1.9247rem + 0.3344vw + 10px,
+      2.25rem + 10px
+    );
+    font-weight: 500;
+    letter-spacing: -0.045em;
+  }
+
+  .atlas-heading-sm {
+    font-size: clamp(1.25rem, 1.203rem + 0.209vw, 1.40625rem);
+    font-weight: 700;
+    line-height: clamp(
+      1.25rem + 10px,
+      1.203rem + 0.209vw + 10px,
+      1.40625rem + 10px
+    );
+  }
+
+  .atlas-text {
+    font-size: clamp(1rem, 0.9624rem + 0.1672vw, 1.125rem);
+    line-height: clamp(
+      1rem + 10px,
+      0.9624rem + 0.1672vw + 10px,
+      1.125rem + 10px
+    );
+    font-weight: 400;
+  }
+
+  h1,
+  a,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #191919;
+    font-family: "Space Grotesk Variable", sans-serif !important;
   }
 
   html,
@@ -105,68 +168,84 @@ const { title } = Astro.props;
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: -0.02px;
-    color: var(--color_headline);
+    color: var(--headlineColor);
   }
+
+  // h5 {
+  //   letter-spacing: 1.2px;
+  //   font-weight: 500;
+  //   font-size: 14px;
+  // }
+
+  // p {
+  //   font-weight: normal;
+  //   line-height: 1.8;
+  //   letter-spacing: 0em;
+  //   font-style: normal;
+  //   font-size: 18px;
+  //   color: #6b665f;
+  // }
 
   .font-5 {
     font-size: var(--fontSize-5);
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: -0.02px;
-    color: var(--color_headline);
+    color: var(--headlineColor);
   }
 
   .font-4 {
     font-size: var(--fontSize-4);
-    line-height: 1.3;
-    font-weight: 700;
-    color: var(--color_headline);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
+    color: var(--headlineColor);
   }
 
   .font-3 {
     font-size: var(--fontSize-3);
     line-height: 1.3;
     font-weight: 500;
-    color: var(--color_headline);
+    color: var(--headlineColor);
   }
 
   .font-2 {
     font-size: var(--fontSize-2);
     line-height: 1.3;
     font-weight: 500;
-    color: var(--color_headline);
+    color: var(--headlineColor);
   }
 
   .font-1 {
     font-size: var(--fontSize-1);
     line-height: 1.55;
-    color: var(--color_headline);
+    color: var(--headlineColor);
   }
 
   .font-0 {
     font-size: var(--fontSize-0);
     line-height: 1.55;
     letter-spacing: 0.01em;
-    color: var(--color_body);
+    color: var(--bodyColor);
   }
 
   .font--1 {
     font-size: var(--fontSize--1);
     line-height: 1.5;
-    color: var(--color_body);
+    color: var(--bodyColor);
   }
 
   .text_link {
     font-size: var(--fontSize--1);
     line-height: 1.5;
-    color: var(--color_link);
+    color: var(--linkColor);
     font-weight: 600;
   }
 
   .font--2 {
     font-size: var(--step--2);
     line-height: 1.5;
-    color: var(--color_body);
+    color: var(--bodyColor);
   }
 
   .u-grid {

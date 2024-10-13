@@ -2,14 +2,18 @@
 interface Props {
   class?: string;
   backgroundColor?: string;
+  height?: "full";
 }
 
-const { class: _class, backgroundColor } = Astro.props;
+const { class: _class, backgroundColor, height } = Astro.props;
 ---
 
-<div style=`background-color: ${backgroundColor};`>
-  <div class="@container/main max-w-[--grid-max-width] mx-auto relative">
-    <div class="mx-[--space-s] @[65rem]/main:mx-[--space-xl]">
+<div
+  style=`background-color: ${backgroundColor};`
+  class=`${ height === 'full' ? 'h-full' : '' }`
+>
+  <div class="@container/main max-w-[--grid-max-width] mx-auto relative h-full">
+    <div class="mx-[--space-s] @[65rem]/main:mx-[--space-xl] h-full">
       <slot />
     </div>
   </div>

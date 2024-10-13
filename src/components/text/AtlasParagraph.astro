@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: _class } = Astro.props;
+---
+
+<p class:list={["atlas-text", _class]}>
+  <slot />
+</p>
+
+<style>
+  p {
+    color: #00112c;
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+import PageSection from "../../Layout/PageSection.astro";
+import AtlasEyebrow from "../../text/AtlasEyebrow.astro";
+import AtlasParagraph from "../../text/AtlasParagraph.astro";
+import Highlight from "./Highlight.astro";
+---
+
+<PageSection>
+  <div class="py-[--space-2xl] grid grid-rows-auto gap-[--grid-gutter]">
+    <div
+      class="flex flex-col-reverse @[44rem]/main:flex-row gap-y-[--grid-gutter]"
+    >
+      <div
+        class="basis-1/2 flex-grow p-[--space-2xs] @[50rem]/main:mr-[--space-3xl]"
+      >
+        <AtlasEyebrow text="Voordelen" class="mb-[--space-2xs]" />
+        <h2 class="atlas-heading-lg">
+          Maximaliseer uw succes met mij aan uw zijde
+        </h2>
+        <AtlasParagraph class="py-[--space-s] mt-[--space-s]">
+          Elke onderneming kan profiteren van duidelijke en efficiënte
+          Excel-oplossingen. Mijn missie is om ingewikkelde taken eenvoudig te
+          maken, zodat u zich kunt focussen op wat echt telt.
+        </AtlasParagraph>
+      </div>
+      <div
+        class="basis-1/2 @[44rem]/main:shrink-0 p-[--space-2xs] overflow-hidden"
+      >
+        <div class="h-[60cqw] @[44rem]/main:h-full w-full bg-red-50 rounded-xl">
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 @[36rem]/main:grid-cols-2 @[52rem]/main:grid-cols-3 gap-[--grid-gutter]"
+    >
+      <Highlight />
+      <Highlight />
+      <Highlight />
+    </div>
+  </div>
+</PageSection>
+
+<style>
+  h5 {
+    color: #5c687c;
+  }
+
+  .dd {
+    border-top-width: 1px;
+    border-style: solid;
+    border-color: #8e8e8e2e;
+  }
+</style>
