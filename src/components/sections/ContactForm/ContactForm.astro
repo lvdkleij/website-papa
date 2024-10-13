@@ -21,12 +21,12 @@ import TextAreaField from "./TextAreaField.astro";
       >
     </div>
     <div class="basis-1/2 grow">
-      <form class="grid grid-cols-6 gap-x-[--grid-gutter] gap-y-[--space-m]">
-        <InputField title="NAAM" class="col-span-3" />
-        <InputField title="WERK EMAIL" class="col-span-3" />
-        <InputField title="TELEFOONNUMMER" class="col-span-3" />
-        <InputField title="BEDRIJFSNAAM" class="col-span-3" />
-        <TextAreaField title="BERICHT" class="col-span-6" />
+      <form class="flex flex-col gap-y-[--space-xs]">
+        <InputField title="Naam" required={true} />
+        <InputField title="Werk email" required={true} />
+        <InputField title="Telefoonnummer" required={true} />
+        <InputField title="Bedrijfsnaam" required={true} />
+        <TextAreaField title="Bericht" required={true} />
       </form>
     </div>
   </div>

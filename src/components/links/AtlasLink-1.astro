@@ -1,12 +1,13 @@
 ---
 interface Props {
   text: string;
+  uri: string;
 }
 
-const { text } = Astro.props;
+const { text, uri } = Astro.props;
 ---
 
-<a class="inline-block atlas-text" data-astro-prefetch>{text}</a>
+<a class="inline-block atlas-text" href={uri} data-astro-prefetch>{text}</a>
 
 <style>
   a {

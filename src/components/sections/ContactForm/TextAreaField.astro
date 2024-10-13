@@ -1,22 +1,91 @@
 ---
 interface Props {
   title: string;
+  required?: boolean;
   class?: string;
 }
 
-const { class: _class, title } = Astro.props;
+const { class: _class, title, required = false } = Astro.props;
 ---
 
-<div class=`${_class}`>
-  <label class="font--2 !font-bold">{title}</label>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const textareas = document.querySelectorAll("textarea");
+
+    textareas.forEach((textarea) => {
+      const label = textarea.previousElementSibling;
+
+      textarea.addEventListener("input", () => {
+        if (textarea.value) {
+          textarea.classList.add("has-value");
+        } else {
+          textarea.classList.remove("has-value");
+        }
+      });
+
+      textarea.addEventListener("focus", () => {
+        label?.classList.add("shrink");
+      });
+
+      textarea.addEventListener("blur", () => {
+        if (!textarea.value) {
+          label?.classList.remove("shrink");
+        }
+      });
+    });
+  });
+</script>
+
+<div class={`${_class} relative`}>
+  <label
+    class="absolute left-[--space-2xs] top-[--space-2xs] field transition-all duration-200 pointer-events-none"
+  >
+    {title}
+    {required && <span class="text-red-500 inline-block scale-90">*</span>}
+  </label>
+
   <textarea
-    class="dd rounded-xl py-[--space-xs] px-[--space-s] w-full"
-    placeholder="LALA"
+    class="dd rounded-lg py-[--space-2xs] px-[--space-2xs] w-full"
     rows="10"></textarea>
 </div>
 
 <style>
+  /* Label Styling */
+  .field {
+    font-size: clamp(1rem, 0.9624rem + 0.1672vw, 1.125rem);
+    line-height: clamp(
+      1rem + 10px,
+      0.9624rem + 0.1672vw + 10px,
+      1.125rem + 10px
+    );
+    font-weight: 400;
+    transition:
+      transform 0.2s ease,
+      font-size 0.2s ease;
+    color: #5c687c;
+  }
+
+  /* Input Styling */
   .dd {
-    border: 2px solid rgb(211, 211, 211);
+    border: 1px solid rgb(211, 211, 211);
+  }
+
+  /* Focused and Active Input Styling */
+  textarea:focus {
+    outline: none;
+    border-color: rgb(20, 161, 67);
+    border-width: 2px;
+    padding-top: calc(var(--space-2xs) + var(--space-2xs));
+  }
+
+  textarea.has-value {
+    padding-top: calc(var(--space-2xs) + var(--space-2xs));
+  }
+
+  /* Label Shrinking on Input Focus or Value */
+  .shrink,
+  textarea.has-value + .field {
+    transform: translateY(-40%);
+    font-size: 0.8rem;
   }
 </style>
