@@ -1,8 +1,6 @@
 ---
 import Card from "../Card.astro";
-import ColumnLayout from "../Layout/ColumnLayout.astro";
 import PageSection from "../Layout/PageSection.astro";
-import RowLayout from "../Layout/RowLayout.astro";
 import AtlasEyebrow from "../text/AtlasEyebrow.astro";
 import AtlasParagraph from "../text/AtlasParagraph.astro";
 ---
@@ -19,7 +17,9 @@ import AtlasParagraph from "../text/AtlasParagraph.astro";
       Excel-oplossingen. Mijn missie is om ingewikkelde taken eenvoudig te
       maken, zodat u zich kunt focussen op wat echt telt.</AtlasParagraph
     >
-    <div class="grid grid-cols-3 w-full gap-[--space-l]">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-[--space-l]"
+    >
       <Card
         title="Geautomatiseerde Rapportages"
         body="Verlies geen tijd meer aan handmatige updates. Ik maak geautomatiseerde rapportages die real-time inzicht geven in uw prestaties. Zo kunt u snel en geïnformeerd beslissingen nemen op basis van actuele data."
