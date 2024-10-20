@@ -35,9 +35,7 @@ export function Navigation(_props: { displayContactButton?: boolean }) {
         style="color: white;"
       >
         <a href="/" data-astro-prefetch>
-          <div class="font-1 font-bold mr-[--space-xs]" style="color: white;">
-            Logo
-          </div>
+          <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
         </a>
         <div class="@[45rem]/main:flex hidden">
           <div class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer">

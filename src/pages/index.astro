@@ -7,15 +7,18 @@ import MainNavigation from "../components/sections/mainNavigation/MainNavigation
 import ContactForm from "../components/sections/ContactForm/ContactForm.astro";
 import { AdvantagesSection } from "../components/sections/AdvantagesSection";
 import Services from "../components/sections/Services.astro";
+import EyeCatcher from "../components/sections/EyeCatcher.astro";
+import EyeCatcher2 from "../components/sections/EyeCatcher2.astro";
+import ThisIsHowItWorks from "../components/sections/ThisIsHowItWorks.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="dd flex flex-col">
-    <MainNavigation />
-    <AboveTheFold />
-  </div>
+  <MainNavigation />
+  <AboveTheFold />
   <AboutMe />
+  <EyeCatcher2 />
   <Services />
+  <ThisIsHowItWorks />
   <AdvantagesSection />
   <ContactForm />
   <Footer />
@@ -26,7 +29,7 @@ import Services from "../components/sections/Services.astro";
     height: calc(100vh - var(--space-3xl));
   }
   .dd {
-    background-color: #0f7c41;
+    background: linear-gradient(145deg, #0f7c41, #0b6636 75%);
     height: calc(100vh - var(--space-3xl));
   }
 </style>

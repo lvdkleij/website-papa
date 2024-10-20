@@ -1,0 +1,88 @@
+---
+import PageSection from "../Layout/PageSection.astro";
+---
+
+<PageSection>
+  <div class="py-16 flex flex-col items-center">
+    <h2 class="text-3xl font-bold text-center mb-8">Dit is hoe het werkt</h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-6xl"
+    >
+      <!-- Stap 1: Neem contact op -->
+      <div
+        class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition duration-300"
+      >
+        <img
+          src="/icons/contact.svg"
+          alt="Neem contact op"
+          class="w-16 h-16 mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Neem contact op</h3>
+        <p class="text-gray-600">
+          Vul het contactformulier in of bel ons direct om uw behoeften en
+          doelen te bespreken.
+        </p>
+      </div>
+
+      <!-- Stap 2: Gratis intake -->
+      <div
+        class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition duration-300"
+      >
+        <img
+          src="/icons/intake.svg"
+          alt="Gratis intake"
+          class="w-16 h-16 mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Gratis intake</h3>
+        <p class="text-gray-600">
+          Tijdens de intake bespreken we uw huidige situatie en de gewenste
+          resultaten.
+        </p>
+      </div>
+
+      <!-- Stap 3: Voorstel op maat -->
+      <div
+        class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition duration-300"
+      >
+        <img
+          src="/icons/proposal.svg"
+          alt="Voorstel op maat"
+          class="w-16 h-16 mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Voorstel op maat</h3>
+        <p class="text-gray-600">
+          Ik stel een gedetailleerd plan voor dat perfect aansluit bij uw
+          bedrijfsbehoeften.
+        </p>
+      </div>
+
+      <!-- Stap 4: Implementatie en Optimalisatie -->
+      <div
+        class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition duration-300"
+      >
+        <img
+          src="/icons/optimization.svg"
+          alt="Implementatie en Optimalisatie"
+          class="w-16 h-16 mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">
+          Implementatie en Optimalisatie
+        </h3>
+        <p class="text-gray-600">
+          Ik werk iteratief aan de implementatie van uw oplossingen, waarbij ik
+          continu feedback integreer en aanpassingen doorvoer om optimale
+          resultaten te garanderen.
+        </p>
+      </div>
+    </div>
+    <!-- Eind CTA -->
+    <div class="mt-12">
+      <a
+        href="#contact"
+        class="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition"
+      >
+        Neem Contact Op
+      </a>
+    </div>
+  </div>
+</PageSection>

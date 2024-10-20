@@ -1,0 +1,36 @@
+---
+import PageSection from "../Layout/PageSection.astro";
+import AtlasParagraph from "../text/AtlasParagraph.astro";
+---
+
+<PageSection backgroundColor="#877b66">
+  <div class="flex my-[--space-2xl]">
+    <div class="@[48rem]/main:basis-1/2">
+      <h2 class="atlas-heading-lg color-white">
+        Do you use Microsoft Excel in your work on a regular basis?
+      </h2>
+      <AtlasParagraph class="mt-[--space-s]">
+        <span class="color-white">
+          If you recurrently use Excel, you might have wondered how a certain
+          task could be completed in less time and in a more efficient way.</span
+        >
+      </AtlasParagraph>
+    </div>
+    <div class="hidden @[48rem]/main:basis-1/2 @[48rem]/main:visible"></div>
+  </div>
+</PageSection>
+
+<style>
+  .color-white {
+    color: white;
+  }
+  .cards {
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    background-color: red;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+  }
+</style>
