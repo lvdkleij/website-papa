@@ -1,0 +1,78 @@
+<div class="relative inline-block" id="dropdown">
+  <button
+    id="dropdown-button"
+    class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-default"
+  >
+    Oplossingen
+  </button>
+  <div
+    id="dropdown-arrow"
+    class="h-[--space-xs] w-[--space-xs] absolute bg-[#f6f9fb] -translate-x-1/2 rotate-45 left-1/2 top-full translate-y-1 rounded-sm hidden"
+  >
+  </div>
+  <div
+    id="dropdown-menu"
+    class="top-full absolute -left-[1rem] pt-[--space-xs] hidden !z-50"
+  >
+    <div class="bg-[#f6f9fb] px-[--space-6xs] py-[--space-6xs] rounded-lg">
+      <div class="bg-white p-[--space-xs] rounded-lg">
+        <ul class="flex flex-col gap-[--space-2xs]">
+          <li>
+            <a href="./solutions/financien" class="font--1 font-semibold">
+              Financien
+            </a>
+          </li>
+          <li>
+            <a href="./solutions/rapportages" class="font--1 font-semibold">
+              Rapportages
+            </a>
+          </li>
+          <li>
+            <a href="./solutions/voorraadbeheer" class="font--1 font-semibold">
+              Voorraadbeheer
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let shouldDisplayDropdown = false;
+
+  const dropdown = document.getElementById("dropdown")!;
+  const button = document.getElementById("dropdown-button")!;
+  const arrow = document.getElementById("dropdown-arrow")!;
+  const menu = document.getElementById("dropdown-menu")!;
+
+  const closeDropdown = () => {
+    arrow.classList.add("hidden");
+    menu.classList.add("hidden");
+  };
+
+  const displayDropdown = () => {
+    arrow.classList.remove("hidden");
+    menu.classList.remove("hidden");
+  };
+
+  // Toggle dropdown visibility
+  const toggleDropdown = () => {
+    shouldDisplayDropdown = !shouldDisplayDropdown;
+    if (shouldDisplayDropdown) {
+      displayDropdown();
+    } else {
+      closeDropdown();
+    }
+  };
+
+  button.addEventListener("click", toggleDropdown)!;
+
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Node) {
+      if (!dropdown.contains(event.target)) {
+        closeDropdown();
+      }
+    }
+  });
+</script>

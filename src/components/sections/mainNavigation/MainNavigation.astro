@@ -1,14 +1,8 @@
 ---
 import PageSection from "../../Layout/PageSection.astro";
-import { LargeScreenNavigation } from "./LargeScreenNavigation";
-import { Navigation } from "./Navigation.tsx";
-
-interface Props {
-  displayContactButton?: boolean;
-}
-const { displayContactButton = true } = Astro.props;
+import LargeScreenNavigation from "./LargeScreenNaivgation.astro";
 ---
 
 <PageSection>
-  <LargeScreenNavigation client:visible />
+  <LargeScreenNavigation />
 </PageSection>

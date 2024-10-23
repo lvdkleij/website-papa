@@ -1,0 +1,36 @@
+---
+import SolutionsDropout from "./SolutionsDropdown.astro";
+---
+
+<nav class="p-[--space-xs] flex items-center z-10">
+  <a href="/" data-astro-prefetch>
+    <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
+  </a>
+  <ul class="flex items-center">
+    <li>
+      <SolutionsDropout />
+    </li>
+    <li>
+      <a
+        href="./coaching"
+        class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
+      >
+        Coaching
+      </a>
+    </li>
+    <li>
+      <a
+        href="./about-me"
+        class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
+      >
+        Over mij
+      </a>
+    </li>
+  </ul>
+  <a
+    href="./contact"
+    class="ml-auto inline-block px-[--space-xs] py-[--space-2xs] border-2 border-solid rounded-lg font-semibold font--1 !text-[#1DBF73] border-[#1DBF73] hover:bg-[#19A463] hover:!text-white hover:border-[#19A463]"
+  >
+    Neem contact op
+  </a>
+</nav>
