@@ -1,8 +1,21 @@
 ---
 import PageSection from "../Layout/PageSection.astro";
+import { Image } from "astro:assets";
+import gridPng from "../../../public/bg.jpeg";
+import gridPngSmall from "../../../public/bg-small.jpeg";
 ---
 
-<div class="a">
+<div class="a relative">
+  <Image
+    class="absolute h-full w-full hidden md:inline-block object-cover"
+    src={gridPng}
+    alt="A bird sitting on a nest of eggs."
+  />
+  <Image
+    class="absolute h-full w-full md:hidden object-cover"
+    src={gridPngSmall}
+    alt="A bird sitting on a nest of eggs."
+  />
   <PageSection backgroundColor="linear-gradient(145deg, #013912, #024919 75%)">
     <div class="pt-[--space-3xl] pb-[--space-4xl]">
       <div class="flex flex-col md:flex-row">
