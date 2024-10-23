@@ -1,0 +1,18 @@
+---
+import { MenuIcon } from "../../icons/MenuIcon/MenuIcon";
+
+interface Props {
+  class?: string;
+}
+
+const { class: _class } = Astro.props;
+---
+
+<nav class=`${_class} p-[--space-xs] flex items-center`>
+  <a href="/">
+    <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
+  </a>
+  <button class="font-1 ml-auto px-[--space-2xs] py-[--space-3xs]">
+    <MenuIcon isActive={false} />
+  </button>
+</nav>

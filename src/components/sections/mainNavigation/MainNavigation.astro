@@ -1,8 +1,10 @@
 ---
 import PageSection from "../../Layout/PageSection.astro";
-import LargeScreenNavigation from "./LargeScreenNaivgation.astro";
+import LargeScreenNavigation from "./LargeScreenNavigation.astro";
+import SmallScreenNaivgation from "./SmallScreenNaivgation.astro";
 ---
 
 <PageSection>
-  <LargeScreenNavigation />
+  <LargeScreenNavigation class="hidden md:flex" />
+  <SmallScreenNaivgation class="flex md:hidden" />
 </PageSection>

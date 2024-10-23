@@ -1,9 +1,14 @@
 ---
 import SolutionsDropout from "./SolutionsDropdown.astro";
+interface Props {
+  class?: string;
+}
+
+const { class: _class } = Astro.props;
 ---
 
-<nav class="p-[--space-xs] flex items-center z-10">
-  <a href="/" data-astro-prefetch>
+<nav class=`${_class} p-[--space-xs] flex items-center`>
+  <a href="/">
     <div class="font-1 font-bold mr-[--space-xs]">Logo</div>
   </a>
   <ul class="flex items-center">

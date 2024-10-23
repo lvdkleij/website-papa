@@ -39,8 +39,6 @@
 </div>
 
 <script>
-  let shouldDisplayDropdown = false;
-
   const dropdown = document.getElementById("dropdown")!;
   const button = document.getElementById("dropdown-button")!;
   const arrow = document.getElementById("dropdown-arrow")!;
@@ -51,28 +49,30 @@
     menu.classList.add("hidden");
   };
 
-  const displayDropdown = () => {
+  const openDropdown = () => {
     arrow.classList.remove("hidden");
     menu.classList.remove("hidden");
   };
 
-  // Toggle dropdown visibility
-  const toggleDropdown = () => {
-    shouldDisplayDropdown = !shouldDisplayDropdown;
-    if (shouldDisplayDropdown) {
-      displayDropdown();
+  const toggleDropdown = (event: MouseEvent | TouchEvent) => {
+    if (arrow.classList.contains("hidden")) {
+      openDropdown();
     } else {
       closeDropdown();
     }
+    event.preventDefault();
   };
 
-  button.addEventListener("click", toggleDropdown)!;
+  dropdown.onmouseenter = openDropdown;
+  dropdown.onmouseleave = closeDropdown;
+  button.onclick = toggleDropdown;
+  button.ontouchstart = toggleDropdown;
 
-  document.addEventListener("click", (event) => {
+  document.onclick = (event) => {
     if (event.target instanceof Node) {
       if (!dropdown.contains(event.target)) {
         closeDropdown();
       }
     }
-  });
+  };
 </script>
