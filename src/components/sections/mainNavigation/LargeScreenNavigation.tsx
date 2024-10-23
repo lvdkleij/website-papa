@@ -12,6 +12,14 @@ export function LargeScreenNavigation() {
           <LinkButton text="Coaching" uri="./coaching" />
           <LinkButton text="Over mij" uri="./about-me" />
         </div>
+        <div class="ml-auto">
+          <a
+            href="./contact"
+            class="inline-block px-[--space-xs] py-[--space-2xs] border-2 border-solid rounded-lg  font-semibold font--1 !text-[#1DBF73] border-[#1DBF73] hover:bg-[#19A463] hover:!text-white hover:border-[#19A463]"
+          >
+            Neem contact op
+          </a>
+        </div>
       </section>
     </>
   );
@@ -31,6 +39,7 @@ function LinkButton(_props: { text: string; uri: string }) {
 function DropdownButton() {
   const [isOpen, setIsOpen] = createSignal(false);
 
+  const toggleDropdown = () => setIsOpen(!isOpen());
   const openDropdown = () => setIsOpen(true);
   const closeDropdown = () => setIsOpen(false);
 
@@ -41,15 +50,18 @@ function DropdownButton() {
         onMouseEnter={openDropdown}
         onMouseLeave={closeDropdown}
       >
-        <button class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-default">
-          Diensten
+        <button
+          onClick={toggleDropdown}
+          class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-default"
+        >
+          Oplossingen
         </button>
         {isOpen() && (
           <div class="h-[--space-xs] w-[--space-xs] absolute bg-[#f6f9fb] -translate-x-1/2 rotate-45 left-1/2 top-full translate-y-1 rounded-sm"></div>
         )}
         {isOpen() && (
           <div class="top-full absolute -left-[1rem] pt-[--space-2xs]">
-            <div class=" bg-[#f6f9fb] px-[--space-6xs] py-[--space-6xs] rounded-lg">
+            <div class="bg-[#f6f9fb] px-[--space-6xs] py-[--space-6xs] rounded-lg">
               <div class="bg-white p-[--space-xs] rounded-lg">
                 <ul class="flex flex-col gap-[--space-2xs]">
                   <li>
