@@ -6,17 +6,14 @@ import AtlasParagraph from "../text/AtlasParagraph.astro";
 
 <PageSection>
   <div
-    class="flex flex-col @[48rem]/main:flex-row py-[--space-3xl] gap-[--grid-gutter] min-h-[36rem]"
+    class="flex flex-col gap-[--space-m] md:flex-row pt-[--space-3xl] md:gap-[--space-xl] lg:gap-[--space-3xl] min-h-[36rem] md:min-h-0"
   >
-    <div class="basis-1/2 @[48rem]/main:shrink-0 overflow-hidden">
-      <div class="h-[60cqw] @[48rem]/main:h-full w-full bg-red-50 rounded-xl">
-      </div>
+    <div class="md:basis-1/2 overflow-hidden">
+      <div class="h-[60cqw] md:h-full w-full bg-red-50 rounded-xl"></div>
     </div>
-    <div class="basis-1/2 px-[--space-xs] @[48rem]/main:px-0">
-      <AtlasEyebrow text="Over mij" />
-      <h2 class="atlas-heading-lg mt-[--space-s]">
-        Hi, ik ben Arno van der Kleij
-      </h2>
+    <div class="md:basis-1/2 px-[--space-xs] md:px-0">
+      <!-- <AtlasEyebrow text="Over mij" /> -->
+      <h2 class="atlas-heading-lg">Hi, ik ben Arno van der Kleij</h2>
       <AtlasParagraph class="mt-[--space-s]"
         ><span>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
@@ -35,7 +32,7 @@ import AtlasParagraph from "../text/AtlasParagraph.astro";
           exercitationem blanditiis quisquam.</span
         >
       </AtlasParagraph>
-      <!-- <AtlasLink1 text="Lees meer" uri="/about-me" /> -->
+      <a href="">Lees meer</a>
     </div>
   </div>
 </PageSection>

@@ -2,30 +2,30 @@
 import PageSection from "../Layout/PageSection.astro";
 ---
 
-<PageSection>
-  <div class="py-[--space-xl]">
+<PageSection backgroundColor="rgba(0,57,18,1)">
+  <div class="pt-[--space-xl] pb-[--space-l]">
     <div
-      class="aa flex flex-col items-center w-full py-[--space-m] px-[--space-m] rounded-xl"
+      class="aa flex flex-col items-center w-full py-[--space-m] px-[--space-m]"
     >
       <h2 class="atlas-heading-lg inline-block md:max-w-[60%] text-center">
         Laten we aan de slag gaan!
       </h2>
       <a
-        class="inline-block w-fit px-[--space-xs] py-[--space-2xs] font-semibold mt-[--space-s] rounded-lg"
-        >Neem contact op</a
+        href="#contact"
+        class="bg-green-600 mt-[--space-l] text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
       >
+        Neem contact op
+      </a>
     </div>
   </div>
 </PageSection>
 
 <style>
   .aa {
-    background-color: #4d1727;
     color: white !important;
   }
 
-  a {
-    background-color: white;
-    color: black;
+  h2 {
+    color: white !important;
   }
 </style>

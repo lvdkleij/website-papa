@@ -4,11 +4,8 @@ import AboveTheFold from "../components/sections/AboveTheFold.astro";
 import Footer from "../components/sections/Footer.astro";
 import AboutMe from "../components/sections/AboutMe.astro";
 import MainNavigation from "../components/sections/mainNavigation/MainNavigation.astro";
-import ContactForm from "../components/sections/ContactForm/ContactForm.astro";
 import { AdvantagesSection } from "../components/sections/AdvantagesSection";
 import Services from "../components/sections/Services.astro";
-import EyeCatcher from "../components/sections/EyeCatcher.astro";
-import EyeCatcher2 from "../components/sections/EyeCatcher2.astro";
 import ThisIsHowItWorks from "../components/sections/ThisIsHowItWorks.astro";
 import Contact from "../components/sections/Contact.astro";
 ---
@@ -17,20 +14,9 @@ import Contact from "../components/sections/Contact.astro";
   <MainNavigation />
   <AboveTheFold />
   <AboutMe />
-  <EyeCatcher2 />
   <Services />
   <ThisIsHowItWorks />
   <AdvantagesSection />
   <Contact />
   <Footer />
 </Layout>
-
-<style>
-  .mask {
-    height: calc(100vh - var(--space-3xl));
-  }
-  .dd {
-    background: linear-gradient(145deg, #0f7c41, #0b6636 75%);
-    height: calc(100vh - var(--space-3xl));
-  }
-</style>
