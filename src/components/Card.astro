@@ -9,7 +9,7 @@ const { title, body, class: _class } = Astro.props;
 ---
 
 <div
-  class=`@container/main group ${_class} fle card-shadow bg-white flex-col rounded-xl overflow-hidden py-[--space-m] px-[--space-s]`
+  class=`@container/main group shrink-0 w-[24rem]  card-shadow bg-white  rounded-xl overflow-hidden py-[--space-m] px-[--space-s]`
 >
   <div
     class="w-[--space-l] bg-slate-50 h-[--space-l] p-[--space-4xs] mb-[--space-s] rounded-sm"
@@ -31,7 +31,7 @@ const { title, body, class: _class } = Astro.props;
 
   .card-shadow {
     box-shadow:
-      0px 18px 36px -18px rgba(0, 0, 0, 0.1),
-      0px 30px 45px -30px rgba(50, 50, 93, 0.25);
+      0px 8px 16px -8px rgba(0, 0, 0, 0.1),
+      0px 13px 27px -12px rgba(50, 50, 93, 0.25);
   }
 </style>

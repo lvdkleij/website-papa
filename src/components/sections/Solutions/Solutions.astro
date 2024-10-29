@@ -1,0 +1,82 @@
+---
+import Card from "./Card.astro";
+import PageSection from "../../Layout/PageSection.astro";
+import AtlasParagraph from "../../text/AtlasParagraph.astro";
+---
+
+<PageSection>
+  <div class="pb-[--space-xl] pt-[--space-2xl] overflow-visible">
+    <div class="flex flex-col lg:flex-row gap-y-[--space-m]">
+      <div class="flex-grow">
+        <h2 class="atlas-heading-lg max-w-[48rem]">
+          Benieuwd wat ik voor je kan betekenen?
+        </h2>
+        <AtlasParagraph class="mt-[--space-s] max-w-[44rem]"
+          >Elke onderneming kan profiteren van duidelijke en efficiënte
+          Excel-oplossingen. Mijn missie is om ingewikkelde taken eenvoudig te
+          maken, zodat u zich kunt focussen op wat echt telt.</AtlasParagraph
+        >
+      </div>
+      <div
+        class="max-md:hidden flex-grow-0 bottom-0 right-0 flex gap-x-[--space-3xs] h-auto self-end"
+      >
+        <div
+          class="rounded-full bg-slate-100 w-[--space-l] h-[--space-l] flex items-center justify-center"
+        >
+          l
+        </div>
+        <div
+          class="rounded-full bg-slate-100 w-[--space-l] h-[--space-l] flex items-center justify-center"
+        >
+          r
+        </div>
+      </div>
+    </div>
+    <div class="mt-[--space-l]">
+      <div
+        class="-ml-[20rem] -mr-[20rem] px-[20rem] flex gap-[--space-l] w-auto overflow-x-auto scrollbar-hide pt-[--space-s] pb-[--space-m] relative"
+      >
+        <Card
+          title="Rapportages"
+          body="Creëer snel overzicht met automatische rapportages. Krijg real-time inzichten, data-analyses en grafieken, allemaal in één overzichtelijke weergave, zodat u altijd de juiste beslissingen neemt."
+        />
+
+        <Card
+          title="Voorraadbeheer"
+          body="Optimaliseer uw voorraad met een dynamisch en betrouwbaar voorraadbeheersysteem. Houd elk product moeiteloos bij, automatiseer voorraadwaarschuwingen en verbeter uw voorraadbeheer zonder gedoe."
+        />
+
+        <Card
+          title="Boekhouding"
+          body="Automatiseer uw boekhoudprocessen en houd uw financiën feilloos bij. Van winst- en verliesrapporten tot gedetailleerde balansoverzichten: krijg alles wat u nodig heeft voor een nauwkeurige boekhouding."
+        />
+
+        <Card
+          title="Facturatie"
+          body="Beheer facturen sneller en eenvoudiger. Van facturering tot betalingsherinneringen: stroomlijn uw facturatieproces en verbeter de cashflow zonder onnodige complexiteit."
+        />
+
+        <Card
+          title="Offertes"
+          body="Stel snel professionele offertes op die indruk maken. Pas uw offertes aan, houd ze eenvoudig bij en verhoog uw slagingskans met moeiteloze offertes in een paar klikken."
+        />
+        <Card
+          title="Urenregistratie"
+          body="Houd nauwkeurig de gewerkte uren bij en vereenvoudig uw tijdsbeheer. Van projecttijd tot overuren, registreer alles overzichtelijk en creëer moeiteloos facturabele urenrapporten."
+        />
+      </div>
+    </div>
+  </div>
+</PageSection>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>

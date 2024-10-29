@@ -1,17 +1,17 @@
-<div class="relative inline-block" id="solutions-dropdown">
+<div class="relative inline-block" id="services-dropdown">
   <button
-    id="solutions-dropdown-button"
+    id="services-dropdown-button"
     class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-default"
   >
-    Oplossingen
+    Diensten
   </button>
   <div
-    id="solutions-dropdown-arrow"
+    id="services-dropdown-arrow"
     class="h-[--space-xs] w-[--space-xs] absolute bg-[#f6f9fb] -translate-x-1/2 rotate-45 left-1/2 top-full translate-y-1 rounded-sm hidden"
   >
   </div>
   <div
-    id="solutions-dropdown-menu"
+    id="services-dropdown-menu"
     class="top-full absolute -left-[1rem] pt-[--space-xs] hidden !z-50"
   >
     <div class="bg-[#f6f9fb] px-[--space-6xs] py-[--space-6xs] rounded-lg">
@@ -19,22 +19,17 @@
         <ul class="flex flex-col gap-[--space-2xs]">
           <li>
             <a href="./solutions/financien" class="font--1 font-semibold">
-              Rapportages
+              Inhuren
             </a>
           </li>
           <li>
             <a href="./solutions/rapportages" class="font--1 font-semibold">
-              Voorraadbeheer
+              Training
             </a>
           </li>
           <li>
             <a href="./solutions/voorraadbeheer" class="font--1 font-semibold">
-              Boekhouding
-            </a>
-          </li>
-          <li>
-            <a href="./solutions/voorraadbeheer" class="font--1 font-semibold">
-              Facturatie
+              Coaching
             </a>
           </li>
         </ul>
@@ -44,10 +39,10 @@
 </div>
 
 <script>
-  const dropdown = document.getElementById("solutions-dropdown")!;
-  const button = document.getElementById("solutions-dropdown-button")!;
-  const arrow = document.getElementById("solutions-dropdown-arrow")!;
-  const menu = document.getElementById("solutions-dropdown-menu")!;
+  const dropdown = document.getElementById("services-dropdown")!;
+  const button = document.getElementById("services-dropdown-button")!;
+  const arrow = document.getElementById("services-dropdown-arrow")!;
+  const menu = document.getElementById("services-dropdown-menu")!;
 
   const closeDropdown = () => {
     arrow.classList.add("hidden");

@@ -1,0 +1,28 @@
+---
+import Card from "./Card.astro";
+import PageSection from "../../Layout/PageSection.astro";
+---
+
+<PageSection>
+  <div class="pb-[--space-xl] pt-[--space-xl] flex flex-col items-center">
+    <!-- <AtlasEyebrow text="Diensten" class="mb-[--space-2xs]" /> -->
+    <h2 class="atlas-heading-lg max-w-[48rem] text-center">
+      Ondersteuning op maat
+    </h2>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[--space-l] mt-[--space-2xl]"
+    >
+      <Card
+        title="Inhuren"
+        body="Ben je op zoek naar iemand die je structureel of op projectmatige basis kan ondersteunen met vraagstukken omtrent Excel?"
+      /><Card
+        title="Training"
+        body="Ben je op zoek naar een maatwerk Excel training?"
+      />
+      <Card
+        title="Coaching"
+        body="Ben je aan het werk met Microsoft Excel en komt je er even niet uit? Dan ben je waarschijnlijk op zoek naar iemand die je snel even op weg kan helpen."
+      />
+    </div>
+  </div>
+</PageSection>

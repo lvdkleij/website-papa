@@ -10,11 +10,13 @@ const { class: _class, backgroundColor, height } = Astro.props;
 
 <div
   style=`background: ${backgroundColor};`
-  class=`${ height === 'full' ? 'h-full' : '' }`
+  class=`${ height === 'full' ? 'h-full' : '' } overflow-visible`
 >
-  <div class="@container/main max-w-[--grid-max-width] mx-auto relative h-full">
+  <div
+    class="@container/main max-w-[--grid-max-width] mx-auto relative h-full overflow-visible"
+  >
     <div
-      class="mx-[--space-s] @[48rem]/main:mx-[--space-m] @[65rem]/main:mx-[--space-xl] h-full"
+      class="mx-[--space-s] @[48rem]/main:mx-[--space-m] @[65rem]/main:mx-[--space-xl] h-full overflow-visible"
     >
       <slot />
     </div>

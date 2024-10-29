@@ -1,5 +1,6 @@
 ---
-import SolutionsDropout from "./SolutionsDropdown.astro";
+import SolutionsDropdown from "./SolutionsDropdown.astro";
+import ServicesDropdown from "./ServicesDropdown.astro";
 interface Props {
   class?: string;
 }
@@ -13,23 +14,10 @@ const { class: _class } = Astro.props;
   </a>
   <ul class="flex items-center">
     <li>
-      <SolutionsDropout />
+      <ServicesDropdown />
     </li>
     <li>
-      <a
-        href="./training"
-        class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
-      >
-        Training
-      </a>
-    </li>
-    <li>
-      <a
-        href="./coaching"
-        class="py-[--space-2xs] px-[--space-xs] font--1 font-semibold cursor-pointer"
-      >
-        Coaching
-      </a>
+      <SolutionsDropdown />
     </li>
     <li>
       <a
@@ -42,7 +30,7 @@ const { class: _class } = Astro.props;
   </ul>
   <a
     href="./contact"
-    class="ml-auto inline-block px-[--space-xs] py-[--space-2xs] border-2 border-solid rounded-lg font-semibold font--1 !text-[#1DBF73] border-[#1DBF73] hover:bg-[#19A463] hover:!text-white hover:border-[#19A463]"
+    class="ml-auto inline-block px-[--space-xs] py-[--space-2xs] border-2 border-solid rounded-lg font-semibold font--1 cursor-pointer !text-[#1DBF73] border-[#1DBF73] hover:bg-[#19A463] hover:!text-white hover:border-[#19A463]"
   >
     Neem contact op
   </a>

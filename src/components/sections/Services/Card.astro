@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  class?: string;
+}
+
+const { title, body, class: _class } = Astro.props;
+---
+
+<div
+  class=`@container/main ${_class} card-shadow bg-white rounded-md overflow-hidden`
+>
+  <div class="mx-[--space-3xs] mt-[--space-3xs] rounded-md overflow-hidden">
+    <div class="bg-slate-100 w-full h-[12rem]"></div>
+  </div>
+  <div class="px-[--space-s] pt-[--space-s] pb-[--space-m]">
+    <div
+      class="w-[--space-l] bg-slate-50 h-[--space-l] p-[--space-4xs] mb-[--space-s] rounded-sm"
+    >
+    </div>
+    <div class="flex flex-col">
+      <h1 class="font-3 font-semibold mb-[--space-s]">{title}</h1>
+      <p class="font-0">
+        {body}
+      </p>
+      <a class="mt-[--space-l] text_link block">Lees meer</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .border-color {
+    border-color: #a0a0a054;
+  }
+
+  .card-shadow {
+    box-shadow:
+      0px 18px 36px -18px rgba(0, 0, 0, 0.1),
+      0px 30px 45px -30px rgba(50, 50, 93, 0.25);
+  }
+</style>
