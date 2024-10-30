@@ -1,4 +1,5 @@
 ---
+import CheckIcon from "../../icons/checkIcon.astro";
 import AtlasParagraph from "../../text/AtlasParagraph.astro";
 
 interface Props {
@@ -9,10 +10,12 @@ const { class: _class } = Astro.props;
 ---
 
 <div class:list={["max-md:p-[--space-xs]", _class]}>
-  <div class="h-10 w-10 bg-red-100"></div>
+  <CheckIcon />
 
-  <h3 class="atlas-heading-sm mt-[--space-m]">Persoonlijke aandacht</h3>
-  <AtlasParagraph class="mt-[--space-2xs]">
-    <slot />
-  </AtlasParagraph>
+  <h3 class="atlas-heading-md mt-[--space-2xs]">
+    <slot name="title" />
+  </h3>
+  <p class="atlas-text-sm text-gray-600 mt-[--space-2xs]">
+    <slot name="body" />
+  </p>
 </div>
